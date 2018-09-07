@@ -5,19 +5,21 @@
    <body>
 
 
-                <form action="cible.php" method="post">
 
+   </body>
+
+			<form action="result.php" method="post" enctype="multipart/form-data">
 
                                 <p>Veuillez taper votre prénom :</p>
-                                  <input type="text" name="prenom" />
+                                  <input type="text" name="firstname" />
 
                                 <p>Veuillez taper votre nom :</p>
-                                  <input type="text" name="nom" />
+                                  <input type="text" name="lastname" />
 
                                   <p>Quel est votre genre ?</p>
-                                    <input type="radio" name="genre" id="femme" checked="checked" /> <label for="oui">Femme</label>
-                                    <input type="radio" name="genre" id="homme" /> <label for="non">Homme</label>
-                                    <input type="radio" name="genre" id="non-binaire" /> <label for="oui">Non-binaire</label>
+                                    <input type="radio" name="gender" value="femme" id="femme" /> <label for="femme">Femme</label>
+                                    <input type="radio" name="gender" value="homme"  id="homme" /> <label for="homme">Homme</label>
+                                    <input type="radio" name="gender" value="non-binaire" id="non-binaire" /> <label for="nonbinaire">Non-binaire</label>
 
                                     <p>Veuillez saisir votre âge :</p>
                                       <select name="age">
@@ -28,14 +30,14 @@
                                       </select>
 
                                     <p>Quels sont vos loisirs ?</p>
-                                      <input type="checkbox" name="case" id="manger" /> <label for="case">Manger</label>
-                                      <input type="checkbox" name="case" id="dormir" /> <label for="case">Dormir</label>
-                                      <input type="checkbox" name="case" id="lire" /> <label for="case">Lire</label>
-                                      <input type="checkbox" name="case" id="niglo" /> <label for="case">Eplucher le niglo<label>
-                  </form>
+                                      <input type="checkbox" name="case[]" value="manger" id="manger" /> <label for="case">Manger</label>
+                                      <input type="checkbox" name="case[]" value="dormir" id="dormir" /> <label for="case">Dormir</label>
+                                      <input type="checkbox" name="case[]" value="lire"  id="lire" /> <label for="case">Lire</label>
+                                      <input type="checkbox" name="case[]" value ="eplucher le niglo" id="niglo" /> <label for="case">Eplucher le niglo<label>
 
-   </body>
-
-</html>
+                                    <p>Formulaire d'envoi de fichier :</p>
+                                      <input type="file" name="myfile" />
+                                      <input type="submit"name="valid" value="Envoyer le formulaire" />
+                 	 </form>
 
 
